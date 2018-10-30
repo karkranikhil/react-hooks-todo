@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
   width:500px;
 `
 const App = memo(props => {
+  // for Input
   const [inputValue, setInputValue] = useState('');
   const changeInput = event => setInputValue(event.target.value);
   const clearInput= () => setInputValue("")
@@ -26,8 +27,7 @@ const App = memo(props => {
     }
     return false;
   }
-  //const { inputValue, changeInput, clearInput, keyInput } = useInputValue();
-  //const { todos, addTodo, checkTodo, removeTodo } = useTodos();
+  // for Todo
   const [todos, setTodos] = useState([]);
   const addTodo = text => {
     if (text !== "") {
